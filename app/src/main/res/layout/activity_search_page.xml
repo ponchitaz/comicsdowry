@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.ponchitaz.comicsdowry.SearchPage"
+    tools:layout_editor_absoluteY="25dp">
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@id/toolbar"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="85dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--android:theme="?attr/actionBarTheme"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="0.0"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:popupTheme="@color/colorPrimary" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@id/logoImage"-->
+    <!--android:layout_width="201dp"-->
+    <!--android:layout_height="55dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:contentDescription="@string/logoImg"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
+    <!--app:layout_constraintEnd_toStartOf="@id/loginButton"-->
+    <!--app:layout_constraintStart_toEndOf="@id/menuButton"-->
+    <!--app:layout_constraintTop_toTopOf="@id/toolbar"-->
+    <!--app:srcCompat="@mipmap/logo" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@id/loginButton"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:contentDescription="@string/loginBtn"-->
+    <!--android:scaleType="fitEnd"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
+    <!--app:layout_constraintEnd_toEndOf="@id/toolbar"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:srcCompat="@mipmap/login_icon" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@id/menuButton"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:adjustViewBounds="false"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:contentDescription="@string/hamburger"-->
+    <!--android:elevation="0dp"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
+    <!--app:layout_constraintStart_toStartOf="@id/toolbar"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:srcCompat="@mipmap/hamburger_icon"-->
+    <!--tools:targetApi="lollipop" />-->
+
+    <include
+        android:id="@id/include"
+        layout="@layout/activity_base"
+        android:layout_width="match_parent"
+        android:layout_height="85dp" />
+
+    <TextView
+        android:id="@+id/searchPageTitle"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/searchPageTitle"
+        android:text="@string/searchPageTitle"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include" />
+
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/searchInput"
+        android:ems="10"
+        android:inputType="text|textPersonName"
+        android:text="@string/searchInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchPageTitle" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/searchButton"
+        android:text="@string/searchButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchInput" />
+
+</android.support.constraint.ConstraintLayout>

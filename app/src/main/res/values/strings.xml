@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">ComicsDowry</string>
+    <string name="main_title">ВСЕ КОМИКСЫ</string>
+    <string name="hamburger">Меню</string>
+    <string name="loginBtn">Вход</string>
+    <string name="logoImg">Comics Dowry</string>
+    <string name="searchBtn">Поиск</string>
+    <string name="comicsListingForMainList">Отображение комикса на главной странице</string>
+    <string name="comicsPic">Обложка</string>
+    <string name="comicsTtl">Название</string>
+    <string name="comicsAuth">Авторы</string>
+    <string name="publishing">Издательство</string>
+    <string name="genre">Жанр</string>
+    <string name="description">-----\n\nОписание\n\n-----</string>
+    <string name="addToShelfBtn">Добавить на полку</string>
+    <string name="addToWishlistBtn">Добавить в вишлист</string>
+    <string name="theRoomTitle">МОЯ КОМНАТА</string>
+    <string name="enterBtn">ВХОД</string>
+    <string name="registerBtn">РЕГИСТРАЦИЯ</string>
+    <string name="loginField">Логин</string>
+    <string name="loginInput">Введите е-мэйл</string>
+    <string name="passwordField">Пароль</string>
+    <string name="passwordInput">Введите пароль</string>
+    <string name="loginViaNetworkAkk">или через аккаунт\nна другом сервисе:</string>
+    <string name="passwordRepeatTitle">Повторите пароль</string>
+    <string name="userName">Имя пользователя</string>
+    <string name="userPic">Аватар пользователя</string>
+    <string name="deleteItemBtn">Убрать</string>
+    <string name="intentionToBuyBtn">Куплю</string>
+    <string name="gotTheItemBtn">Есть</string>
+    <string name="sendAndEnterButton">Войти</string>
+    <string name="sendAndRegisterButton">Зарегистрироваться</string>
+    <string name="searchPageTitle">Поиск</string>
+    <string name="searchInput">Что ищем?</string>
+    <string name="searchButton">Найти</string>
+    <string name="searchMenuLine">Поиск</string>
+    <string name="mainMenuLine">Главная</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

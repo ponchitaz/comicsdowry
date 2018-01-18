@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.ponchitaz.comicsdowry.TheRoom">
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@id/toolbar"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="85dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--android:theme="?attr/actionBarTheme"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:popupTheme="@color/colorPrimary" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@id/logoImage"-->
+    <!--android:layout_width="201dp"-->
+    <!--android:layout_height="55dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:contentDescription="@string/logoImg"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
+    <!--app:layout_constraintEnd_toStartOf="@id/loginButton"-->
+    <!--app:layout_constraintStart_toEndOf="@id/menuButton"-->
+    <!--app:layout_constraintTop_toTopOf="@id/toolbar"-->
+    <!--app:srcCompat="@mipmap/logo" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@id/loginButton"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:contentDescription="@string/loginBtn"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
+    <!--app:layout_constraintEnd_toEndOf="@id/toolbar"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:srcCompat="@mipmap/login_icon" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@id/menuButton"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:adjustViewBounds="false"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:contentDescription="@string/hamburger"-->
+    <!--android:elevation="0dp"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
+    <!--app:layout_constraintStart_toStartOf="@id/toolbar"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:srcCompat="@mipmap/hamburger_icon"-->
+    <!--tools:targetApi="lollipop" />-->
+
+    <include
+        android:id="@id/include"
+        layout="@layout/activity_base"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/theRoomTitle"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/theRoomTitle"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include" />
+
+    <TabHost
+        android:id="@+id/theRoomTabs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/theRoomTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:clickable="false" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/room"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/userPicture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="24dp"
+                        android:contentDescription="@string/userPic"
+                        android:cropToPadding="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/user_pic" />
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/userName"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/userPicture" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/shelf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/comicsListingForShelf"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/listingBackgroundColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@id/comicsAuthors"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/comicsAuth"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toEndOf="@+id/comicsPicture"
+                            app:layout_constraintTop_toBottomOf="@+id/comicsTitle"
+                            android:layout_marginLeft="8dp" />
+
+                        <ImageView
+                            android:id="@id/comicsPicture"
+                            android:layout_width="90dp"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:contentDescription="@string/comicsPic"
+                            android:cropToPadding="true"
+                            android:scaleType="fitXY"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@mipmap/splash_screen"
+                            android:layout_marginLeft="16dp" />
+
+                        <TextView
+                            android:id="@id/comicsTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/comicsTtl"
+                            android:text="@string/comicsTtl"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toEndOf="@+id/comicsPicture"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginLeft="8dp" />
+
+                        <Button
+                            android:id="@+id/deleteTheItemButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginTop="8dp"
+                            android:contentDescription="@string/deleteItemBtn"
+                            android:text="@string/deleteItemBtn"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0"
+                            android:layout_marginRight="16dp" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/wishlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/comicsListingForWishlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/listingBackgroundColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@id/comicsAuthors"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/comicsAuth"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toEndOf="@+id/comicsPicture"
+                            app:layout_constraintTop_toBottomOf="@+id/comicsTitle"
+                            android:layout_marginLeft="8dp" />
+
+                        <ImageView
+                            android:id="@id/comicsPicture"
+                            android:layout_width="90dp"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:contentDescription="@string/comicsPic"
+                            android:cropToPadding="true"
+                            android:scaleType="fitXY"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@mipmap/splash_screen"
+                            android:layout_marginLeft="16dp" />
+
+                        <TextView
+                            android:id="@id/comicsTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/comicsTtl"
+                            android:text="@string/comicsTtl"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toEndOf="@+id/comicsPicture"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginLeft="8dp" />
+
+                        <Button
+                            android:id="@+id/intentionToBuyButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:contentDescription="@string/intentionToBuyBtn"
+                            android:text="@string/intentionToBuyBtn"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginRight="16dp" />
+
+                        <Button
+                            android:id="@+id/gotTheItemButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:contentDescription="@string/gotTheItemBtn"
+                            android:text="@string/gotTheItemBtn"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/intentionToBuyButton"
+                            android:layout_marginRight="16dp" />
+
+                        <Button
+                            android:id="@id/deleteTheItemButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:contentDescription="@string/deleteItemBtn"
+                            android:text="@string/deleteItemBtn"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/gotTheItemButton"
+                            android:layout_marginRight="16dp" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.constraint.ConstraintLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</android.support.constraint.ConstraintLayout>

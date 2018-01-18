@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.ponchitaz.comicsdowry.RegistrationPage"
+    tools:layout_editor_absoluteY="25dp">
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="359dp"-->
+    <!--android:layout_height="85dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--android:theme="?attr/actionBarTheme"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:popupTheme="@color/colorPrimary" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/logoImage"-->
+    <!--android:layout_width="201dp"-->
+    <!--android:layout_height="55dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:contentDescription="@string/logoImg"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
+    <!--app:layout_constraintEnd_toStartOf="@id/loginButton"-->
+    <!--app:layout_constraintStart_toEndOf="@id/menuButton"-->
+    <!--app:layout_constraintTop_toTopOf="@id/toolbar"-->
+    <!--app:srcCompat="@mipmap/logo" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/loginButton"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:contentDescription="@string/loginBtn"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
+    <!--app:layout_constraintEnd_toEndOf="@id/toolbar"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:srcCompat="@mipmap/login_icon"-->
+    <!--android:layout_marginRight="8dp" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/menuButton"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:adjustViewBounds="false"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:contentDescription="@string/hamburger"-->
+    <!--android:elevation="0dp"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
+    <!--app:layout_constraintStart_toStartOf="@id/toolbar"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:srcCompat="@mipmap/hamburger_icon"-->
+    <!--tools:targetApi="lollipop"-->
+    <!--android:layout_marginLeft="8dp" />-->
+
+    <include
+        android:id="@id/include"
+        layout="@layout/activity_base"
+        android:layout_width="match_parent"
+        android:layout_height="85dp" />
+
+    <TextView
+        android:id="@+id/registrationPageTitle"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/theRoomTitle"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include" />
+
+    <Button
+        android:id="@id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/enterBtn"
+        android:text="@string/enterBtn"
+        app:layout_constraintEnd_toStartOf="@id/registrationButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registrationPageTitle"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="16dp" />
+
+    <Button
+        android:id="@id/registrationButton"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorAccent"
+        android:contentDescription="@string/registerBtn"
+        android:text="@string/registerBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/loginButton"
+        app:layout_constraintTop_toBottomOf="@id/registrationPageTitle"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@id/loginFieldTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/loginField"
+        android:text="@string/loginField"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registrationButton" />
+
+    <EditText
+        android:id="@id/loginInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/loginInput"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="@string/loginInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginFieldTitle" />
+
+    <TextView
+        android:id="@id/passwordFieldTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/passwordField"
+        android:text="@string/passwordField"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginInput" />
+
+    <EditText
+        android:id="@id/passwordInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/passwordInput"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="@string/passwordInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordFieldTitle" />
+
+    <TextView
+        android:id="@+id/passwordRepeatTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/passwordRepeatTitle"
+        android:text="@string/passwordRepeatTitle"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordInput" />
+
+    <EditText
+        android:id="@+id/passwordRepeatInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/passwordInput"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="@string/passwordInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordRepeatTitle" />
+
+    <Button
+        android:id="@+id/sendAndRegisterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/sendAndRegisterButton"
+        android:text="@string/sendAndRegisterButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordRepeatInput" />
+</android.support.constraint.ConstraintLayout>
