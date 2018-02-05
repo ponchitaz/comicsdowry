@@ -6,78 +6,6 @@
     android:layout_height="match_parent"
     tools:context="io.ponchitaz.comicsdowry.TheRoom">
 
-    <!--<android.support.v7.widget.Toolbar-->
-    <!--android:id="@id/toolbar"-->
-    <!--android:layout_width="0dp"-->
-    <!--android:layout_height="85dp"-->
-    <!--android:background="@color/colorPrimary"-->
-    <!--android:minHeight="?attr/actionBarSize"-->
-    <!--android:theme="?attr/actionBarTheme"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintStart_toStartOf="parent"-->
-    <!--app:layout_constraintTop_toTopOf="parent"-->
-    <!--app:popupTheme="@color/colorPrimary" />-->
-
-    <!--<ImageView-->
-    <!--android:id="@id/logoImage"-->
-    <!--android:layout_width="201dp"-->
-    <!--android:layout_height="55dp"-->
-    <!--android:layout_marginBottom="8dp"-->
-    <!--android:layout_marginEnd="8dp"-->
-    <!--android:layout_marginStart="8dp"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:background="@color/colorPrimary"-->
-    <!--android:contentDescription="@string/logoImg"-->
-    <!--android:scaleType="fitXY"-->
-    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
-    <!--app:layout_constraintEnd_toStartOf="@id/loginButton"-->
-    <!--app:layout_constraintStart_toEndOf="@id/menuButton"-->
-    <!--app:layout_constraintTop_toTopOf="@id/toolbar"-->
-    <!--app:srcCompat="@mipmap/logo" />-->
-
-    <!--<ImageButton-->
-    <!--android:id="@id/loginButton"-->
-    <!--android:layout_width="50dp"-->
-    <!--android:layout_height="50dp"-->
-    <!--android:layout_marginBottom="8dp"-->
-    <!--android:layout_marginEnd="8dp"-->
-    <!--android:layout_marginRight="8dp"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:background="@color/colorPrimary"-->
-    <!--android:contentDescription="@string/loginBtn"-->
-    <!--android:scaleType="fitXY"-->
-    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
-    <!--app:layout_constraintEnd_toEndOf="@id/toolbar"-->
-    <!--app:layout_constraintTop_toTopOf="parent"-->
-    <!--app:srcCompat="@mipmap/login_icon" />-->
-
-    <!--<ImageButton-->
-    <!--android:id="@id/menuButton"-->
-    <!--android:layout_width="50dp"-->
-    <!--android:layout_height="50dp"-->
-    <!--android:layout_marginBottom="8dp"-->
-    <!--android:layout_marginLeft="8dp"-->
-    <!--android:layout_marginStart="8dp"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:adjustViewBounds="false"-->
-    <!--android:background="@color/colorPrimary"-->
-    <!--android:contentDescription="@string/hamburger"-->
-    <!--android:elevation="0dp"-->
-    <!--android:scaleType="fitXY"-->
-    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
-    <!--app:layout_constraintStart_toStartOf="@id/toolbar"-->
-    <!--app:layout_constraintTop_toTopOf="parent"-->
-    <!--app:srcCompat="@mipmap/hamburger_icon"-->
-    <!--tools:targetApi="lollipop" />-->
-
-    <include
-        android:id="@id/include"
-        layout="@layout/activity_base"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/theRoomTitle"
         android:layout_width="0dp"
@@ -91,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/include" />
+        app:layout_constraintTop_toBottomOf="@id/nav" />
 
     <TabHost
         android:id="@+id/theRoomTabs"
@@ -336,4 +264,16 @@
             </FrameLayout>
         </LinearLayout>
     </TabHost>
+
+    <fragment
+        android:id="@id/nav"
+        android:name="io.ponchitaz.comicsdowry.NavFragment"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@id/theRoomTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_nav" />
 </android.support.constraint.ConstraintLayout>
