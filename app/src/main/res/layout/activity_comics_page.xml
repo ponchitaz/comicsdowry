@@ -4,220 +4,238 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.ponchitaz.comicsdowry.ComicsPage">
+    android:fadeScrollbars="?android:attr/windowOverscan"
+    android:scrollIndicators="top|right"
+    android:scrollbars="vertical"
+    tools:context="io.ponchitaz.comicsdowry.ComicsPage"
+    tools:targetApi="m">
 
     <!--<android.support.v7.widget.Toolbar-->
-        <!--android:id="@+id/toolbar"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="85dp"-->
-        <!--android:background="@color/colorPrimary"-->
-        <!--android:minHeight="?attr/actionBarSize"-->
-        <!--android:theme="?attr/actionBarTheme"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.0"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:popupTheme="@color/colorPrimary" />-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="85dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--android:theme="?attr/actionBarTheme"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="0.0"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:popupTheme="@color/colorPrimary" />-->
 
     <!--<ImageView-->
-        <!--android:id="@+id/logoImage"-->
-        <!--android:layout_width="201dp"-->
-        <!--android:layout_height="55dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:background="@color/colorPrimary"-->
-        <!--android:contentDescription="@string/logoImg"-->
-        <!--android:scaleType="fitXY"-->
-        <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
-        <!--app:layout_constraintEnd_toStartOf="@id/loginButton"-->
-        <!--app:layout_constraintStart_toEndOf="@id/menuButton"-->
-        <!--app:layout_constraintTop_toTopOf="@id/toolbar"-->
-        <!--app:srcCompat="@mipmap/logo" />-->
+    <!--android:id="@+id/logoImage"-->
+    <!--android:layout_width="201dp"-->
+    <!--android:layout_height="55dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:contentDescription="@string/logoImg"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
+    <!--app:layout_constraintEnd_toStartOf="@id/loginButton"-->
+    <!--app:layout_constraintStart_toEndOf="@id/menuButton"-->
+    <!--app:layout_constraintTop_toTopOf="@id/toolbar"-->
+    <!--app:srcCompat="@mipmap/logo" />-->
 
     <!--<ImageButton-->
-        <!--android:id="@+id/loginButton"-->
-        <!--android:layout_width="50dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:background="@color/colorPrimary"-->
-        <!--android:contentDescription="@string/loginBtn"-->
-        <!--android:scaleType="fitXY"-->
-        <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
-        <!--app:layout_constraintEnd_toEndOf="@id/toolbar"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:srcCompat="@mipmap/login_icon"-->
-        <!--android:layout_marginRight="8dp" />-->
+    <!--android:id="@+id/loginButton"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:contentDescription="@string/loginBtn"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
+    <!--app:layout_constraintEnd_toEndOf="@id/toolbar"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:srcCompat="@mipmap/login_icon"-->
+    <!--android:layout_marginRight="8dp" />-->
 
     <!--<ImageButton-->
-        <!--android:id="@+id/menuButton"-->
-        <!--android:layout_width="50dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:layout_marginLeft="8dp"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:adjustViewBounds="false"-->
-        <!--android:background="@color/colorPrimary"-->
-        <!--android:contentDescription="@string/hamburger"-->
-        <!--android:elevation="0dp"-->
-        <!--android:scaleType="fitXY"-->
-        <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
-        <!--app:layout_constraintStart_toStartOf="@id/toolbar"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:srcCompat="@mipmap/hamburger_icon"-->
-        <!--tools:targetApi="lollipop" />-->
+    <!--android:id="@+id/menuButton"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:adjustViewBounds="false"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:contentDescription="@string/hamburger"-->
+    <!--android:elevation="0dp"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/toolbar"-->
+    <!--app:layout_constraintStart_toStartOf="@id/toolbar"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:srcCompat="@mipmap/hamburger_icon"-->
+    <!--tools:targetApi="lollipop" />-->
 
-    <include
-        android:id="@id/include"
-        layout="@layout/activity_base"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--<include-->
+    <!--android:id="@id/include"-->
+    <!--layout="@layout/activity_base"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="85dp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
 
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/comicsPage"
-        android:layout_width="0dp"
+    <ScrollView
+        android:id="@+id/comicsPageScroller"
+        android:layout_width="395dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/include"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@id/nav">
 
-        <ImageView
-            android:id="@+id/comicsPicture"
-            android:layout_width="130dp"
-            android:layout_height="190dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:contentDescription="@string/comicsPic"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/splash_screen"
-            android:layout_marginLeft="16dp" />
-
-        <TextView
-            android:id="@+id/comicsTitle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="28dp"
-            android:contentDescription="@string/comicsTtl"
-            android:text="@string/comicsTtl"
-            android:textSize="25sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/comicsPicture"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginRight="8dp"
-            android:layout_marginLeft="16dp" />
-
-        <TextView
-            android:id="@+id/comicsAuthors"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="@string/comicsAuth"
-            android:text="@string/comicsAuth"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/comicsPicture"
-            app:layout_constraintTop_toBottomOf="@id/comicsTitle"
-            android:layout_marginRight="8dp"
-            android:layout_marginLeft="16dp" />
-
-        <TextView
-            android:id="@+id/comicsPublishing"
-            android:layout_width="0dp"
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/comicsPage"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="@string/publishing"
-            android:text="@string/publishing"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/comicsGenre"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toEndOf="@id/comicsPicture"
-            app:layout_constraintTop_toBottomOf="@id/comicsAuthors"
-            app:layout_constraintVertical_bias="1.0"
-            android:layout_marginRight="8dp"
-            android:layout_marginLeft="16dp" />
-
-        <TextView
-            android:id="@+id/comicsGenre"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="16dp"
-            android:contentDescription="@string/genre"
-            android:text="@string/genre"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@id/comicsPicture"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/comicsPicture"
-            android:layout_marginRight="8dp"
-            android:layout_marginLeft="16dp" />
-
-        <TextView
-            android:id="@+id/comicsDescription"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:contentDescription="@string/description"
-            android:text="@string/description"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/comicsPicture"
-            app:layout_constraintVertical_chainStyle="spread_inside" />
-
-        <Button
-            android:id="@id/addToShelfButton"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:contentDescription="@string/addToShelfBtn"
-            android:text="@string/addToShelfBtn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/comicsDescription" />
-
-        <Button
-            android:id="@id/addToWishlistButton"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:contentDescription="@string/addToWishlistBtn"
-            android:text="@string/addToWishlistBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/addToShelfButton" />
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
-    </android.support.constraint.ConstraintLayout>
+            <ImageView
+                android:id="@+id/comicsPicture"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/comicsPic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/splash_screen" />
+
+            <TextView
+                android:id="@+id/comicsTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:contentDescription="@string/comicsTtl"
+                android:text="@string/comicsTtl"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/comicsPicture"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/comicsAuthors"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/comicsAuth"
+                android:text="@string/comicsAuth"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/comicsPicture"
+                app:layout_constraintTop_toBottomOf="@id/comicsTitle" />
+
+            <TextView
+                android:id="@+id/comicsPublishing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/publishing"
+                android:text="@string/publishing"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toEndOf="@id/comicsPicture"
+                app:layout_constraintTop_toBottomOf="@id/comicsAuthors" />
+
+            <TextView
+                android:id="@+id/comicsGenre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/genre"
+                android:text="@string/genre"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/comicsPicture"
+                app:layout_constraintTop_toBottomOf="@+id/comicsPublishing" />
+
+            <TextView
+                android:id="@+id/comicsDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:contentDescription="@string/description"
+                android:text="@string/description"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/comicsPicture"
+                app:layout_constraintVertical_chainStyle="spread_inside" />
+
+            <Button
+                android:id="@id/addToShelfButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/addToShelfBtn"
+                android:text="@string/addToShelfBtn"
+                app:layout_constraintBottom_toTopOf="@+id/addToWishlistButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comicsDescription" />
+
+            <Button
+                android:id="@id/addToWishlistButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/addToWishlistBtn"
+                android:text="@string/addToWishlistBtn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addToShelfButton" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <fragment
+        android:id="@id/nav"
+        android:name="io.ponchitaz.comicsdowry.NavFragment"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@id/comicsPageScroller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_nav" />
+
 </android.support.constraint.ConstraintLayout>

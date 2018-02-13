@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.ponchitaz.comicsdowry.BaseActivity"
-    tools:layout_editor_absoluteY="25dp">
+    tools:context="io.ponchitaz.comicsdowry.NavFragment"
+    tools:layout_editor_absoluteY="25dp"
+    app:theme="@style/ThemeOverlay.AppCompat.Light"
+    android:tag="nav_frag">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -78,11 +81,17 @@
         android:layout_width="95dp"
         android:layout_height="0dp"
         android:layout_gravity="start"
+        android:layout_weight="3"
         android:background="@color/colorPrimary"
+        android:forceHasOverlappingRendering="true"
+        android:foreground="@color/colorPrimary"
+        android:foregroundGravity="left"
         android:visibility="invisible"
+        app:elevation="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:menu="@menu/navigation_menu" />
+        app:menu="@menu/navigation_menu"
+        tools:targetApi="n" />
 
 </android.support.constraint.ConstraintLayout>
