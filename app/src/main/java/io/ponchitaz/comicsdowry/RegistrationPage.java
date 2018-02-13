@@ -2,20 +2,24 @@ package io.ponchitaz.comicsdowry;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.*;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
+
+/**
+ * This is the class for registration activity.
+ */
 
 public class RegistrationPage extends AppCompatActivity implements NavFragment.OnFragmentInteractionListener {
 
@@ -38,22 +42,22 @@ public class RegistrationPage extends AppCompatActivity implements NavFragment.O
         sendAndRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            // проверка, заколнены ли поля
+                // проверка, заколнены ли поля
                 if (loginInputField != null && passwordInputFirst != null && passwordInputSecond != null) {
-            // TODO: проверка ввода электронного адреса (т.е. на наличие @???)
-                    if (loginInputField != null){
+                    // TODO: проверка ввода электронного адреса (т.е. на наличие @???)
+                    if (loginInputField != null) {
 
                     } else {
-            // вывод сообщения о некорректном заполнении формы
+                        // вывод сообщения о некорректном заполнении формы
                         Toast.makeText(RegistrationPage.this, "Введите действительный электронный адрес", Toast.LENGTH_SHORT).show();
                     }
-            //проверка одинаковости указанных паролей
-                    if (passwordInputFirst == passwordInputSecond){
-            // TODO: прокерка наличия логина в базе
+                    //проверка одинаковости указанных паролей
+                    if (passwordInputFirst == passwordInputSecond) {
+                        // TODO: прокерка наличия логина в базе
 
-            // запись нового юзера в базу
+                        // запись нового юзера в базу
                         int id = 000002;
-                        String userID = "user"+id;
+                        String userID = "user" + id;
                         id++;
                         // TODO: описать правила изменения айдишника для новых юзеров
                         String email = loginInputField.getText().toString().trim();
@@ -79,11 +83,11 @@ public class RegistrationPage extends AppCompatActivity implements NavFragment.O
                             }
                         });
                     } else {
-            // вывод сообщения о некорректном заполнении формы
+                        // вывод сообщения о некорректном заполнении формы
                         Toast.makeText(RegistrationPage.this, "Пароли должны совпадать", Toast.LENGTH_SHORT).show();
                     }
                 } else {
-            // вывод сообщение о некорректности заполнения формы
+                    // вывод сообщение о некорректности заполнения формы
                     Toast.makeText(RegistrationPage.this, "Заполните все поля", Toast.LENGTH_SHORT).show();
                 }
             }

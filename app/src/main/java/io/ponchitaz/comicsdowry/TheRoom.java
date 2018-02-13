@@ -2,30 +2,24 @@ package io.ponchitaz.comicsdowry;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageMetadata;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
-import java.io.File;
+/**
+ * It's all about the user room with tabs and lists.
+ * By Feb 14, 2018 it is only a demo and doesn't work.
+ */
 
 public class TheRoom extends AppCompatActivity implements NavFragment.OnFragmentInteractionListener {
 
@@ -46,37 +40,30 @@ public class TheRoom extends AppCompatActivity implements NavFragment.OnFragment
         Button gotTheItemBtn = (Button) findViewById(R.id.gotTheItemButton);
         Button willBuyBtn = (Button) findViewById(R.id.intentionToBuyButton);
 
-//        myFirebaseRef = FirebaseDatabase.getInstance().getReference();
-//        myStorageRef = FirebaseStorage.getInstance().getReference();
-
         // описываем отображение комиксов
         myFirebaseRef = FirebaseDatabase.getInstance().getReference().child("books/book000001");
         myFirebaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                for (DataSnapshot comicsPreview: dataSnapshot.getChildren()) {
+                for (DataSnapshot comicsPreview : dataSnapshot.getChildren()) {
                     String cTitle = (String) dataSnapshot.child("bookTitle").getValue();
                     comicsTitle.setText(cTitle);
                     String cAuth = (String) dataSnapshot.child("bookAuthors").getValue().toString();
                     comicsAuthors.setText(cAuth);
                 }
-
-//                String cPic = dataSnapshot.getValue().toString();
-//                comicsPic.setImageURI(cPic);
             }
+
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
         });
 
-
-
         Intent i = getIntent();
         int activeTab = i.getIntExtra("activeTab", 0);
 
-// Работа с вкладками
+        // Работа с вкладками
 
         final TabHost tabHost = (TabHost) findViewById(R.id.theRoomTabs);
         tabHost.setup();
@@ -125,10 +112,8 @@ public class TheRoom extends AppCompatActivity implements NavFragment.OnFragment
 //                // загружаем файл по адресу "имя_папки/file.jpg"
 //                UploadTask uploadTask = comicsPicRef.putFile(cPic);
 
-        
 
-
-                            }
+    }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
@@ -193,7 +178,6 @@ public class TheRoom extends AppCompatActivity implements NavFragment.OnFragment
 //            }
 //        });
 //    }
-
 
 
 }

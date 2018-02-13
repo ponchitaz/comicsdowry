@@ -1,20 +1,16 @@
 package io.ponchitaz.comicsdowry;
 
-import android.app.FragmentContainer;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -22,17 +18,19 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.*;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
+
+/**
+ * The class describes how teh activity "activity_comics_page.xml" should work.
+ * The activity opens after the card with a comic book was clicked -
+ * it is where the complete info about the book is shown.
+ * Here are also two buttons for adding the book in one of the user lists.
+ */
 
 public class ComicsPage extends AppCompatActivity implements NavFragment.OnFragmentInteractionListener {
 
     private DatabaseReference myFirebaseRef;
-    private StorageReference comicsPicRef;
-//    private FragmentManager navFragMngr = getFragmentManager();
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,22 +44,24 @@ public class ComicsPage extends AppCompatActivity implements NavFragment.OnFragm
         final TextView comicsDescription = (TextView) findViewById(R.id.comicsDescription);
         Button addToShelfBtn = (Button) findViewById(R.id.addToShelfButton);
         Button addToWishlistBtn = (Button) findViewById(R.id.addToWishlistButton);
-//        navFragMngr.beginTransaction().add(R.id.nav, FragmentContainer.class);
 
 //        addToShelfBtn.setOnClickListener(AddToListsListener);
-        addToWishlistBtn.setOnClickListener(AddToListsListener);
+//        addToWishlistBtn.setOnClickListener(AddToListsListener);
 
-        myFirebaseRef = FirebaseDatabase.getInstance().getReference().child("books/book000001");
-        comicsPicRef = FirebaseStorage.getInstance().getReference().child("comicsPics/book000001.jpg");
+        /**
+         * Here the activity gets the info about the book it has to show.
+         * This information is taken from the adapter, so the activity
+         * with cards, where the click was made, is not important
+         * as they all share one adapter.
+         */
 
-        // читаем из базы и отображаем инфу по комиксу
+        String bookToOpen = getIntent().getExtras().getString("bookInfo");
+        myFirebaseRef = FirebaseDatabase.getInstance().getReference().child("ComicsBook/" + bookToOpen);
 
         myFirebaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot comicsPreview: dataSnapshot.getChildren()) {
-                    // TODO: наладить отображение, чтобы не налезало друг на друга
-                    // TODO: добавить прокрутку на ВСЕ экраны
+                for (DataSnapshot comicsPreview : dataSnapshot.getChildren()) {
                     String cTitle = (String) dataSnapshot.child("bookTitle").getValue();
                     comicsTitle.setText(cTitle);
                     String cAuth = (String) dataSnapshot.child("bookAuthors").getValue().toString();
@@ -72,26 +72,22 @@ public class ComicsPage extends AppCompatActivity implements NavFragment.OnFragm
                     comicsGenre.setText("Тэги: \n" + cGenre);
                     String cDescr = (String) dataSnapshot.child("bookDescription").getValue();
                     comicsDescription.setText(cDescr);
+                    String cPic = (String) dataSnapshot.child("bookPicUrl").getValue().toString();
+                    Glide.with(getApplicationContext()).load(cPic).into(comicsPic);
                 }
-
-//                String cPic = (String) dataSnapshot.child("bookPic").getRef().;
-//                comicsPic.setImageURI(imageUtil.getImageURI());
-//                Uri.fromFile()
-
-//                // берем Uri файла
-//                Uri cPic = Uri.fromFile(new File("comicsPics/book000001.jpg"));
-//                // загружаем файл по адресу "имя_папки/file.jpg"
-//                UploadTask uploadTask = comicsPicRef.putFile(cPic);
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
         });
-
-//        NavFragment fragment = (NavFragment) getFragmentManager().findFragmentById(R.id.nav);
     }
+
+    /**
+     * Here ate the listeners for buttons,
+     * but by  Feb 14, 2018 they are just drafts as the functionality of
+     * lists and users are not available yet.
+     */
 
     private View.OnClickListener AddToListsListener = new View.OnClickListener() {
         @Override
@@ -149,10 +145,4 @@ public class ComicsPage extends AppCompatActivity implements NavFragment.OnFragm
     public void onFragmentInteraction(Uri uri) {
 
     }
-//    @Override
-//    public void onButtonPressed(FragmentActivity fa, View v, int position, Uri id) {
-//        // Send the event to the host activity
-//        mListener.onClickListener(id);
-//    }
-
 }

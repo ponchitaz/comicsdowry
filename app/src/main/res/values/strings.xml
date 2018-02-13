@@ -35,6 +35,8 @@
     <string name="searchButton">Найти</string>
     <string name="searchMenuLine">Поиск</string>
     <string name="mainMenuLine">Главная</string>
+    <string name="menuOpen">Открыть меню</string>
+    <string name="menuClose">Закрыть меню</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

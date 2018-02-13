@@ -1,12 +1,13 @@
 package io.ponchitaz.comicsdowry;
 
-import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
+import android.support.v7.app.AppCompatActivity;
+
+
+/**
+ * This is the class for login activity.
+ */
 
 public class LoginPage extends AppCompatActivity implements NavFragment.OnFragmentInteractionListener {
 
@@ -14,9 +15,6 @@ public class LoginPage extends AppCompatActivity implements NavFragment.OnFragme
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
-
-//        FirebaseDatabase myFirestore;
-//        myFirestore = FirebaseDatabase.getInstance();
     }
 
     @Override

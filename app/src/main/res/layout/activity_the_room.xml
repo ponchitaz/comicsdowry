@@ -270,10 +270,15 @@
         android:name="io.ponchitaz.comicsdowry.NavFragment"
         android:layout_width="match_parent"
         android:layout_height="85dp"
-        android:layout_weight="1"
         app:layout_constraintBottom_toTopOf="@id/theRoomTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_nav" />
+        tools:layout="@layout/fragment_nav"
+        android:foreground="@color/colorPrimary"
+        android:foregroundGravity="left"
+        android:layout_weight="3"
+        app:elevation="3dp"
+        android:forceHasOverlappingRendering="true"
+        tools:targetApi="n"/>
 </android.support.constraint.ConstraintLayout>

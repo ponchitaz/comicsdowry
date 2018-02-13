@@ -31,8 +31,9 @@
         android:layout_marginTop="24dp"
         android:contentDescription="@string/searchInput"
         android:ems="10"
+        android:hint="@string/searchInput"
+        android:imeOptions="actionDone"
         android:inputType="text|textPersonName"
-        android:text="@string/searchInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchPageTitle" />
@@ -49,6 +50,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchInput" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/mainRecyclerViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchButton">
+    </android.support.v7.widget.RecyclerView>
 
     <fragment
         android:id="@id/nav"

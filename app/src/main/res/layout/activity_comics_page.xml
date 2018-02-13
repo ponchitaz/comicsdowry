@@ -111,9 +111,8 @@
 
             <ImageView
                 android:id="@+id/comicsPicture"
-                android:layout_width="130dp"
-                android:layout_height="190dp"
-                android:layout_marginLeft="16dp"
+                android:layout_width="150dp"
+                android:layout_height="210dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:contentDescription="@string/comicsPic"
@@ -123,11 +122,9 @@
 
             <TextView
                 android:id="@+id/comicsTitle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="28dp"
                 android:contentDescription="@string/comicsTtl"
@@ -139,11 +136,9 @@
 
             <TextView
                 android:id="@+id/comicsAuthors"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/comicsAuth"
@@ -155,39 +150,32 @@
 
             <TextView
                 android:id="@+id/comicsPublishing"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/publishing"
                 android:text="@string/publishing"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/comicsGenre"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.505"
                 app:layout_constraintStart_toEndOf="@id/comicsPicture"
-                app:layout_constraintTop_toBottomOf="@id/comicsAuthors"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toBottomOf="@id/comicsAuthors" />
 
             <TextView
                 android:id="@+id/comicsGenre"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
                 android:contentDescription="@string/genre"
                 android:text="@string/genre"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@id/comicsPicture"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/comicsPicture" />
+                app:layout_constraintStart_toEndOf="@id/comicsPicture"
+                app:layout_constraintTop_toBottomOf="@+id/comicsPublishing" />
 
             <TextView
                 android:id="@+id/comicsDescription"
@@ -195,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:contentDescription="@string/description"
                 android:text="@string/description"
                 android:textSize="20sp"
